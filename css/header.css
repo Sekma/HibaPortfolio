@@ -66,6 +66,7 @@
 	 transform: skewX(18deg);
 	 transition: transform 1s, opacity 1s;
 	 background-size: cover;
+	 background-position: center;
 }
  .skw-page__half--left .skw-page__content {
 	 padding-left: 30%;
@@ -73,17 +74,21 @@
 	 transform-origin: 100% 0;
 }
  .skw-page__half--right .skw-page__content {
-	 padding-left: 30%;
-	 padding-right: 30%;
+	 padding-left: 20%;
+	 padding-right: 20%;
 	 transform-origin: 0 100%;
 }
  .skw-page.inactive .skw-page__content {
 	 opacity: 0.5;
 	 transform: skewX(18deg) scale(0.95);
 }
+.skw-page__photo{
+	width: 150px;
+	border-radius: 50%;
+}
  .skw-page__heading {
 	 margin-bottom: 15px;
-	 text-transform: uppercase;
+	 /* text-transform: uppercase; */
 	 font-size: 25px;
 	 text-align: center;
 }
@@ -91,11 +96,26 @@
 	 font-size: 18px;
 	 text-align: center;
 }
+.skw-page__content .btn-profil{
+	text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(123, 211, 234, 0.5);
+    padding: 10px 40px;
+}
+.skw-page__content .btn-profil:hover{
+    color: rgb(123, 211, 234);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgb(123, 211, 234);
+}
+.skw-page__content ul li{
+	margin-top: 10px;
+}
  .skw-page__link {
 	 color: #ffa0a0;
 }
  .skw-page-1 .skw-page__half--left .skw-page__content {
-	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-1.jpg');
+	 background-image: url('../img/wd1.jpg');
 }
  .skw-page-1 .skw-page__half--right .skw-page__content {
 	 background: #292929;
@@ -104,10 +124,10 @@
 	 background: #292929;
 }
  .skw-page-2 .skw-page__half--right .skw-page__content {
-	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg');
+	 background-image: url('../img/wd2.jpg');
 }
  .skw-page-3 .skw-page__half--left .skw-page__content {
-	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-2.jpg');
+	 background-image: url('../img/articles.jpg');
 }
  .skw-page-3 .skw-page__half--right .skw-page__content {
 	 background: #292929;
@@ -116,7 +136,8 @@
 	 background: #292929;
 }
  .skw-page-4 .skw-page__half--right .skw-page__content {
-	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg');
+	 background-image: url('../img/Most-Frequently-Challenged-Book-ftr-672x372.jpg');
+	 background-position: left;
 }
  .skw-page-5 .skw-page__half--left .skw-page__content {
 	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/img-test.jpg');
