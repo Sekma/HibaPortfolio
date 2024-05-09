@@ -8,6 +8,25 @@
 	 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	 text-align: justify;
 }
+nav{
+  position: fixed !important;
+  z-index: 1 !important;
+  top: 10px !important;
+  right: 45% !important;
+  text-align: center;
+}
+nav::after{
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+nav ul{
+  display: flex;
+}
+nav ul li{
+  list-style-type: none;
+}
+nav ul li i{
+  width: 40px;
+}
  .skw-pages {
 	 overflow: hidden;
 	 position: relative;
@@ -69,6 +88,7 @@
 	 transition: transform 1s, opacity 1s;
 	 background-size: cover;
 	 background-position: center;
+	 text-shadow: 1px 1px rgb(0, 0, 0);
 }
 .skw-page-3 .skw-page__content a{
 	text-decoration: none;
@@ -102,9 +122,21 @@
  .skw-page__description {
 	 font-size: 18px;
 }
-
+.skw-page-4 img{
+  width: 30px;
+  box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75);
+  transition: all 0.5s;
+}
+.skw-page-4 img:hover{
+  width: 60px;
+  box-shadow: none;
+}
+.skw-page-5 img{
+  width: 150px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
 /* CV button */
-.btn-profil {
+.btn-profil, nav {
 	text-decoration: none;
   padding: 0.6em 2em;
   border: none;
@@ -120,7 +152,7 @@
   touch-action: manipulation;
 }
 
-.btn-profil:before {
+.btn-profil:before, nav::before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -160,7 +192,7 @@
   }
 }
 
-.btn-profil:after {
+.btn-profil:after, nav::after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -185,7 +217,7 @@
 	
 	}
  .skw-page-1 .skw-page__half--right .skw-page__content {
-	 background: rgb(10, 104, 71);
+	 background: rgb(4, 130, 155);
 }
  .skw-page-2 .skw-page__half--left .skw-page__content {
 	 background: rgb(4, 130, 155);
@@ -215,7 +247,25 @@
 .sections-mobile{
 	display: none;
 }
-
+/* Auteur */
+.auteur{
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 0;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.5);
+}
+.auteur span{
+  color: #000;
+  text-shadow: none;
+  font-size: x-small;
+}
+.auteur .auteur-contact i{
+  width: 18px;
+  margin: 10px;
+  opacity: 0.6;
+}
 @media (max-width: 1200px){
 	.skw-pages{
 		display: none;
@@ -228,6 +278,11 @@
 html,
 body {
   overflow: hidden;
+}
+nav{
+  bottom: auto !important;
+  right: 10px !important;
+  padding: 0.6em 0.6em !important;
 }
 .sections-mobile {
   height: 100vh;
@@ -307,9 +362,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
-  }
-  .section__body-mobile-1::before{
-	background-color: rgb(10, 104, 71);
   }
   .section__body-mobile img{
 	width: 100px;
