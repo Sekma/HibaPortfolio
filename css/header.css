@@ -13,6 +13,7 @@ nav{
   z-index: 1 !important;
   top: 10px !important;
   right: 45% !important;
+  cursor: auto !important;
   text-align: center;
 }
 nav::after{
@@ -93,6 +94,7 @@ nav ul li i{
 .skw-page-3 .skw-page__content a{
 	text-decoration: none;
 	color: rgb(255, 193, 0);
+  transition: all 0.5s;
 }
 .skw-page-3 .skw-page__content a:hover{
 	color: rgb(255, 101, 0);
@@ -122,13 +124,17 @@ nav ul li i{
  .skw-page__description {
 	 font-size: 18px;
 }
+.skw-page-4 .articles{
+  height: 150px;
+  width: 400px;
+}
 .skw-page-4 img{
-  width: 30px;
+  width: 50px;
   box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75);
   transition: all 0.5s;
 }
 .skw-page-4 img:hover{
-  width: 60px;
+  width: 100px;
   box-shadow: none;
 }
 .skw-page-5 img{
@@ -251,6 +257,7 @@ nav ul li i{
 .auteur{
   position: relative;
   width: 100%;
+  text-shadow: none;
   margin-left: auto;
   margin-bottom: 0;
   text-align: center;
@@ -258,12 +265,11 @@ nav ul li i{
 }
 .auteur span{
   color: #000;
-  text-shadow: none;
   font-size: x-small;
 }
 .auteur .auteur-contact i{
-  width: 18px;
   margin: 10px;
+  color: #000;
   opacity: 0.6;
 }
 @media (max-width: 1200px){
