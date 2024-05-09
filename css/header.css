@@ -5,7 +5,8 @@
 }
  body {
 	 background: #15181a;
-	 font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	 text-align: justify;
 }
  .skw-pages {
 	 overflow: hidden;
@@ -53,8 +54,9 @@
 }
  .skw-page__content {
 	 display: flex;
+	 flex-direction: column;
 	 align-items: center;
-	 justify-content: center;
+	 justify-content: space-around;
 	 flex-flow: column wrap;
 	 position: absolute;
 	 left: 0;
@@ -67,6 +69,13 @@
 	 transition: transform 1s, opacity 1s;
 	 background-size: cover;
 	 background-position: center;
+}
+.skw-page-3 .skw-page__content a{
+	text-decoration: none;
+	color: rgb(255, 193, 0);
+}
+.skw-page-3 .skw-page__content a:hover{
+	color: rgb(255, 101, 0);
 }
  .skw-page__half--left .skw-page__content {
 	 padding-left: 30%;
@@ -89,63 +98,121 @@
 	 margin-bottom: 15px;
 	 /* text-transform: uppercase; */
 	 font-size: 25px;
-	 text-align: center;
 }
  .skw-page__description {
 	 font-size: 18px;
-	 text-align: center;
 }
-.skw-page__content .btn-profil{
+
+/* CV button */
+.btn-profil {
 	text-decoration: none;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgba(123, 211, 234, 0.5);
-    padding: 10px 40px;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-.skw-page__content .btn-profil:hover{
-    color: rgb(123, 211, 234);
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgb(123, 211, 234);
+
+.btn-profil:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-btn-profil 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-btn-profil {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-profil:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* end CV button */
+
+
+.skw-page__content ul{
+	padding-right: 20px;
 }
 .skw-page__content ul li{
 	margin-top: 10px;
 }
- .skw-page__link {
-	 color: #ffa0a0;
-}
  .skw-page-1 .skw-page__half--left .skw-page__content {
-	 background-image: url('../img/backgroung/portfolio-acceuil.png');
+	 background-image: url('../img/backgroung/portfolio-acceuil.jpg');
 	
 	}
  .skw-page-1 .skw-page__half--right .skw-page__content {
-	 background: #292929;
+	 background: rgb(10, 104, 71);
 }
  .skw-page-2 .skw-page__half--left .skw-page__content {
-	 background: #292929;
+	 background: rgb(4, 130, 155);
 }
  .skw-page-2 .skw-page__half--right .skw-page__content {
-	 background-image: url('../img/backgroung/diplomes.png');
+	 background-image: url('../img/backgroung/diplomes.jpg');
 }
  .skw-page-3 .skw-page__half--left .skw-page__content {
-	 background-image: url('../img/articles.jpg');
+	 background-image: url('../img/backgroung/recherche.jpg');
 }
  .skw-page-3 .skw-page__half--right .skw-page__content {
-	 background: #292929;
+	 background: rgb(4, 130, 155);
 }
  .skw-page-4 .skw-page__half--left .skw-page__content {
-	 background: #292929;
+	 background: rgb(4, 130, 155);
 }
  .skw-page-4 .skw-page__half--right .skw-page__content {
-	 background-image: url('../img/Most-Frequently-Challenged-Book-ftr-672x372.jpg');
+	 background-image: url('../img/backgroung/projets.jpg');
 	 background-position: left;
 }
  .skw-page-5 .skw-page__half--left .skw-page__content {
-	 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/img-test.jpg');
+	 background-image: url('../img/backgroung/coaching.jpg');
 }
  .skw-page-5 .skw-page__half--right .skw-page__content {
-	 background: #292929;
+	 background: rgb(4, 130, 155);
 }
-.sections{
+.sections-mobile{
 	display: none;
 }
 
@@ -153,7 +220,7 @@
 	.skw-pages{
 		display: none;
 	}
-	.sections{
+	.sections-mobile{
 		display: block;
 	}
 	
@@ -162,13 +229,13 @@ html,
 body {
   overflow: hidden;
 }
-.sections {
+.sections-mobile {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
-.section {
+.section-mobile {
   scroll-snap-align: start;
 }
 
@@ -191,16 +258,16 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    line-height: 1.875rem;
     font-family: Arial, Helvetica, sans-serif;
     background: var(--background-color);
     color: var(--text-color);
+	text-align: justify;
   }
   
   /* ------------------------ */
-  /*          Section         */
+  /*      Section-mobile      */
   /* ------------------------ */
-  .section {
+  .section-mobile {
   
     width: 100vw;
     min-height: 100vh;
@@ -210,16 +277,24 @@ body {
     justify-content: space-between;
   }
   
-  .section__body {
-    align-items: center;
-    display: flex;
+  .section__body-mobile {
     flex-grow: 1;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+	background-size: 200%;
+	background-position: bottom;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: column wrap;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 5% 10% 20% 10%;
   }
-  .section__body::before {
+  .section__body-mobile::before {
     content: ' ';
     display: block;
     position: absolute;
@@ -227,17 +302,26 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    background-color: rgb(4, 130, 155);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
   }
-   h1 {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-	  position: relative;
-    }
+  .section__body-mobile-1::before{
+	background-color: rgb(10, 104, 71);
+  }
+  .section__body-mobile img{
+	width: 100px;
+  }
+  .section__body-mobile img, .section__body-mobile p, .section__body-mobile div{
+	position: relative;
+	margin-right: auto;
+	font-size: 15px;
+	text-shadow: 1px 1px rgb(0, 0, 0);
+  }
+  .section__body-mobile ul li{
+	font-size: 16px;
+	text-shadow: 1px 1px rgb(0, 0, 0);
+  }
  }
