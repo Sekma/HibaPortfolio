@@ -386,6 +386,10 @@ nav{
     box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75);
     transition: all 0.5s;
   }
+  /* Auteur */
+.skw-page-5 .auteur, .section-mobile-5 .auteur{
+  margin-bottom: 20px;
+}
  }
  @media (max-width: 767px){
   .section-mobile-4 .articles{
